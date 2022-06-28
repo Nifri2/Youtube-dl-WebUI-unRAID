@@ -7,7 +7,7 @@
 
 return array(
 	"bin" => "/usr/local/bin/yt-dlp",
-	"security" => true,
+	"security" => getenv('SECURITY'),
 	"password" => md5(getenv('PASSWORD')),
 	"outputFolder" => "downloads",
 	"extracter" => "ffmpeg",
