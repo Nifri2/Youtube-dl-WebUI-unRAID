@@ -40,4 +40,4 @@ EXPOSE 80
 
 VOLUME /www/youtube-dl/downloads
 
-CMD youtube-dl -U && /usr/sbin/apache2ctl -D FOREGROUND
+CMD python3 /www/youtube-dl/setup/innit.py  youtube-dl -U && /usr/sbin/apache2ctl -D FOREGROUND
