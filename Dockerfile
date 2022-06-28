@@ -26,7 +26,7 @@ WORKDIR /www/youtube-dl
 RUN rm -rf .git README.md img .gitignore docker
 
 WORKDIR /
-RUN chmod -R 755 /www && chown -R www-data:www-data /www
+RUN chmod -R 744 /www && chown -R www-data:www-data /www
 
 copy ./docker/apache2.conf /etc/apache2/apache2.conf
 COPY ./docker/vhost.conf /etc/apache2/sites-enabled/000-default.conf

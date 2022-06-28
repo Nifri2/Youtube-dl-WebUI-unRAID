@@ -26,5 +26,5 @@ return array(
 ?>
 """
 
-with open('/www/youtube-dl/config/config.php') as config:
+with open('/www/youtube-dl/config/config.php', 'w') as config:
     config.write(php_conf)
