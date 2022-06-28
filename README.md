@@ -21,3 +21,9 @@ docker run -p 8080:80 \
     -v /path/to/video/folder:/www/youtube-dl/downloads \ # replace /path/to/video/folder with your preferred downlaod folder
     youtube-dl-webui
 ```
+
+## Usage
+
+Parameters can be used like in this example:
+
+![unRAID](https://github.com/Nifri2/Youtube-dl-WebUI-unRAID/raw/master/img/unraid.png)
