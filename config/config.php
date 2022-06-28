@@ -6,6 +6,12 @@
 
 // im sorry ive never programmed in PHP
 
+if (getenv('MAX_DL')) {
+	$max_dl = getenv('MAX_DL')
+} else {
+	$max_dl = 2
+}
+
 return array(
 	"bin" => "/usr/local/bin/yt-dlp",
 	"security" => true,
@@ -15,7 +21,7 @@ return array(
 	"log" => true,
 	"outfilename" => "%(title)s-%(id)s.%(ext)s",
 	"logFolder" => "logs",
-	"max_dl" => 3,
+	"max_dl" => $max_dl,
 	"session_lifetime" => 86400);
 
 ?>
