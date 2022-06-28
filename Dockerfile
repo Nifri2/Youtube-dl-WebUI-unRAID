@@ -13,6 +13,7 @@ RUN rm -rf /var/lib/apt/lists/*
 #Install youtube-dl
 # RUN curl https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && chmod a+x /usr/local/bin/youtube-dl
 RUN pip3 install youtube-dl
+RUN pip3 install yt-dlp
 
 
 WORKDIR /
