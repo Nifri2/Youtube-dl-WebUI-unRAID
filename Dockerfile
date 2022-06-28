@@ -19,6 +19,7 @@ RUN pip3 install yt-dlp
 WORKDIR /
 RUN mkdir /www
 
+ARG CACHEBUST=1
 WORKDIR /www
 RUN git clone https://github.com/Nifri2/Youtube-dl-WebUI-unRAID youtube-dl
 

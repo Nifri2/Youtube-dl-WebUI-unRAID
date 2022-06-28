@@ -6,12 +6,6 @@
 
 // im sorry ive never programmed in PHP
 
-if (getenv('MAX_DL') == false )  {
-	$max_dl = 3
-} else {
-	$max_dl = getenv('MAX_Dl')
-}
-
 return array(
 	"bin" => "/usr/local/bin/yt-dlp",
 	"security" => true,
