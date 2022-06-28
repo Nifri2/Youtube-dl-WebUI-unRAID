@@ -1,6 +1,6 @@
 from os import getenv
 
-max_dls = getenv("max_dls", "5")
+max_dls = getenv("MAX_DL", "5")
 
 
 
