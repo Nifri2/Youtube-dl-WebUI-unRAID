@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>youtube-dl-webui</Name>
+  <Repository>nifri/youtube-dl-webui-unraid:amd64</Repository>
+  <Registry>https://hub.docker.com/repository/registry-1.docker.io/nifri/youtube-dl-webui-unraid/general</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/Nifri2/Youtube-dl-WebUI-unRAID</Project>
+  <Overview>WebUI for youtube-dl&#xD;
+&#xD;
+Fork of timendum/Youtube-dl-WebUI, which is a good looking WebUI for youtube-dl and yt-dlp.&#xD;
+&#xD;
+Original Project: https://github.com/timendum/Youtube-dl-WebUI&#xD;
+Container Repo: https://github.com/Nifri2/Youtube-dl-WebUI-unRAID</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/timendum/Youtube-dl-WebUI/blob/master/favicon_144.png?raw=true</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1656423229</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="80" Default="8080" Mode="tcp" Description="WebUI Access Port" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+  <Config Name="Password" Target="PASSWORD" Default="mysecret" Mode="" Description="Password for the WebUI" Type="Variable" Display="always" Required="false" Mask="false">password</Config>
+  <Config Name="Max Concurrent Downloads" Target="MAX_DL" Default="8" Mode="" Description="Maximum Concurrent downloads" Type="Variable" Display="always" Required="false" Mask="false">16</Config>
+  <Config Name="Downloads" Target="/www/youtube-dl/downloads" Default="" Mode="rw" Description="Where the videos/audio will be stored" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Security" Target="SECURITY" Default="true" Mode="" Description="Enables / Disables password for the UI" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+</Container>
