@@ -1,3 +1,11 @@
+from os import getenv
+
+max_dls = getenv("max_dls", "5")
+
+
+
+
+php_conf = f"""
 <?php
 
 //Default password is "root" with md5 hash
@@ -12,7 +20,11 @@ return array(
 	"log" => true,
 	"outfilename" => "%(title)s-%(id)s.%(ext)s",
 	"logFolder" => "logs",
-	"max_dl" => 3,
+	"max_dl" => {max_dls},
 	"session_lifetime" => 86400);
 
 ?>
+"""
+
+with open('/www/youtube-dl/config/config.php') as config:
+    config.write(php_conf)

@@ -20,7 +20,7 @@ WORKDIR /
 RUN mkdir /www
 
 WORKDIR /www
-RUN git clone https://github.com/timendum/Youtube-dl-WebUI youtube-dl
+RUN git clone https://github.com/Nifri2/Youtube-dl-WebUI-unRAID youtube-dl
 
 WORKDIR /www/youtube-dl
 RUN rm -rf .git README.md img .gitignore docker
@@ -33,6 +33,8 @@ COPY ./docker/vhost.conf /etc/apache2/sites-enabled/000-default.conf
 
 RUN ln -sf /dev/stdout /var/log/apache2/youtube-dl_access.log
 RUN ln -sf /dev/stderr /var/log/apache2/youtube-dl_error.log
+
+
 
 EXPOSE 80
 
