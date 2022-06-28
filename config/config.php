@@ -4,13 +4,6 @@
 //No "/" at the end of outputFolder or logfolder
 
 
-// im sorry ive never programmed in PHP
-
-if (getenv('MAX_DL')) {
-	$max_dl = getenv('MAX_DL')
-} else {
-	$max_dl = 2
-}
 
 return array(
 	"bin" => "/usr/local/bin/yt-dlp",
@@ -21,7 +14,7 @@ return array(
 	"log" => true,
 	"outfilename" => "%(title)s-%(id)s.%(ext)s",
 	"logFolder" => "logs",
-	"max_dl" => $max_dl,
+	"max_dl" => getenv('MAX_DL'),
 	"session_lifetime" => 86400);
 
 ?>
