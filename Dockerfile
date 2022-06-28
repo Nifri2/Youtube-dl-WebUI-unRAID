@@ -1,4 +1,4 @@
-FROM debian
+FROM --platform=linux/x86-64 debian
 
 
 RUN apt-get update && apt-get install -y software-properties-common
