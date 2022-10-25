@@ -275,10 +275,13 @@ class Downloader
 		$cmd .= " --ignore-error -o ".$this->download_path."/";
 		$cmd .= escapeshellarg($this->outfilename);
 		
+
 		if ($this->vformat) 
 		{
 			$cmd .= " --format ";
 			$cmd .= escapeshellarg($this->vformat);
+		} else {
+			$cmd .= " --format bestvideo+bestaudio ";
 		}
 		if($audio_only)
 		{

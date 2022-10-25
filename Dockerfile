@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y software-properties-common
 
 RUN apt-get update 
 RUN apt-get install -y --no-install-recommends \
-    git python python3 python3-pip apache2 php curl ca-certificates
+    git python python3 python3-pip apache2 php curl ca-certificates ffmpeg
 
 
 RUN rm -rf /var/lib/apt/lists/*
